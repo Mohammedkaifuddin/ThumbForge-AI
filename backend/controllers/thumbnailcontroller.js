@@ -2,7 +2,7 @@
 
 import { GoogleGenAI } from "@google/genai";
 import { thumbnail } from "../models/Thumbnail.js";
-import { User } from "../models/user.js";
+import { User } from "../models/User.js";
 import fs from "fs";
 
 import dotenv from "dotenv";
