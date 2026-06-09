@@ -3,7 +3,8 @@ import axios from 'axios';
 import { Image, History, Wand2, Trash2, Loader2, LogOut } from 'lucide-react';
 import Auth from './Auth'; // Import the new Login controller
 
-const API_BASE_URL = 'http://localhost:5000/api/thumbnail';
+//const API_BASE_URL = 'http://localhost:5000/api/thumbnail';
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api/thumbnail`;
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('thumbforge_token') || '');
