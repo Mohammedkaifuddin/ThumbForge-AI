@@ -29,9 +29,14 @@ export default function Auth({ onLoginSuccess }) {
 
     setLoading(true);
 
-    const endpoint = isLogin 
-      ? 'http://localhost:5000/api/auth/login' 
-      : 'http://localhost:5000/api/auth/register';
+  const API_URL = import.meta.env.VITE_API_URL;
+
+   const endpoint = isLogin
+  ? `${API_URL}/api/auth/login`
+  : `${API_URL}/api/auth/register`;
+    // const endpoint = isLogin 
+    //   ? 'http://localhost:5000/api/auth/login' 
+    //   : 'http://localhost:5000/api/auth/register';
 
     // Build payload dynamically based on view status
     const payload = isLogin ? { email, password } : { username, email, password };
