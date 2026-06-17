@@ -46,7 +46,7 @@ export default function Auth({ onLoginSuccess }) {
 
     try {
       const response = await axios.post(endpoint, payload);
-
+      console.log("LOGIN RESPONSE:", response.data);
       if (isLogin) {
         if (response.data.success && response.data.token) {
           onLoginSuccess(response.data.token);
